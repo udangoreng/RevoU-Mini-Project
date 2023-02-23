@@ -33,14 +33,14 @@
     <section>
       <div class="home" id="home">
         <div class="home-paragraph">
-          <h1>Welcome to Our Website, <span id="nma"> </span></h1>
+          <h1>Welcome to Our Website, <span id="nma" name="nma"> </span></h1>
           <div class="quote">
             <h4>
               Take a Look Around safely!
             </h4>
           </div>
         </div>
-        </div>
+      </div>
       </div>
     </section>
 
@@ -49,13 +49,17 @@
         <div class="about-paragraph">
           <h1>ABOUT US</h1>
           <p>
-            RevoU Community is a go-to platform where you can access quality content and programs designed to help you advance in your professional career.
+            RevoU Community is a go-to platform where you can access quality content and programs designed to help you
+            advance in your professional career.
           </p>
-          <p>Recession Proof your Career by learning the most valuable digital skills from the Best in the Industry. 100% Live Online Classes, Career Mentors, and Lifelong Community support to unlock endless opportunities.</p>
+          <p>Recession Proof your Career by learning the most valuable digital skills from the Best in the Industry.
+            100% Live Online Classes, Career Mentors, and Lifelong Community support to unlock endless opportunities.
+          </p>
           <p>
-            Network with thousands of like-minded professionals with strong desire for success, Enrich your connection, meet up offline with fellow alumni near you, Continue your lifelong learning with RevoU.
+            Network with thousands of like-minded professionals with strong desire for success, Enrich your connection,
+            meet up offline with fellow alumni near you, Continue your lifelong learning with RevoU.
           </p>
-          </div>
+        </div>
       </div>
     </section>
 
@@ -67,18 +71,20 @@
         <div class="vision">
           <h2>Vision</h2>
           <h3>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, beatae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, beatae.
           </h3>
         </div>
         <div class="mission">
-        <h2>Mission</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nisi cupiditate, temporibus quo iure repellendus vero tempora iusto consequatur ullam minima numquam doloremque at et laboriosam, explicabo perferendis necessitatibus. Laudantium!</p>
+          <h2>Mission</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nisi cupiditate, temporibus quo iure
+            repellendus vero tempora iusto consequatur ullam minima numquam doloremque at et laboriosam, explicabo
+            perferendis necessitatibus. Laudantium!</p>
         </div>
       </div>
       <br>
 
       <div class="chapter">
-        <div >
+        <div>
           <h3>Some of</h3>
           <h1 style="margin-top: -10px;">OUR CHAPTER</h1>
         </div>
@@ -106,36 +112,36 @@
           <h2>MESSAGE US</h2>
           <table>
             <form name="message" onsubmit="return validate()">
-            <tr>
-              <th>
-                <label>Name</label>
-              </th>
-              <td><input type="text" name="name" id="nama"></td>
-            </tr>
-            <tr>
-              <th>
-                <label>Email</label>
-              </th>
-              <td><input type="text" name="email" id="email"></td>
-            </tr>
-            <tr>
-              <th>
-                <label>Phone</label>
-              </th>
-              <td><input type="text" name="phone" id="phone"></td>
-            </tr>
-            <tr>
-              <th>
-                <label>Message</label>
-              </th>
-              <td><textarea name="message" id="message"></textarea></td>
-            </tr>
-            <tr>
-              <input type="submit" value="Send" class="btn"/>
-            </tr>
-        </form>
-        </table>
-  
+              <tr>
+                <th>
+                  <label>Name</label>
+                </th>
+                <td><input type="text" name="name" id="nama"></td>
+              </tr>
+              <tr>
+                <th>
+                  <label>Email</label>
+                </th>
+                <td><input type="text" name="email" id="email"></td>
+              </tr>
+              <tr>
+                <th>
+                  <label>Phone</label>
+                </th>
+                <td><input type="text" name="phone" id="phone"></td>
+              </tr>
+              <tr>
+                <th>
+                  <label class="message-msg">Message</label>
+                </th>
+                <td><textarea name="message" id="message"></textarea></td>
+              </tr>
+              <tr>
+                <input type="submit" value="Send" class="btn" />
+              </tr>
+            </form>
+          </table>
+
         </div>
         <div class="message">
           <p>Nama : <span id="nm"></span></p>
@@ -153,32 +159,30 @@
       <h4>2023, Divananda A. S | With Revou</h4>
     </div>
   </footer>
-
   <script>
-    var nama= prompt('Before We Get Started, May I Know Your Name?');
-    document.getElementById("nma").innerText = nama;
-  </script>
-  
-  <script>
-    function validate(){
-        var name= document.forms['message']['name'].value;
-        var email= document.forms['message']['email'].value;
-        var phone= document.forms['message']['phone'].value;
-        var message= document.forms['message']['message'].value;
+    var nama = prompt('Before We Get Started, May I Know Your Name?');
+    document.getElementById("nma").innerHTML = nama;
+    console.log(nama);
 
-        if(nama == "" || email == "" || message == ""){
-            alert("Oops, you forget some field there, Buddy!");
-            return false;
-        }
-        document.getElementById('nm').innerText = name;
-        document.getElementById('em').innerText = email;
-        document.getElementById('ph').innerText = phone;
-        document.getElementById('msg').innerText = message;
+    function validate() {
+      var name = document.forms['message']['name'].value;
+      var email = document.forms['message']['email'].value;
+      var phone = document.forms['message']['phone'].value;
+      var message = document.forms['message']['message'].value;
+
+      if (nama == "" || email == "" || message == "") {
+        alert("Oops, you forget some field there, Buddy!");
         return false;
-        
+      }
+      document.getElementById('nm').innerText = name;
+      document.getElementById('em').innerText = email;
+      document.getElementById('ph').innerText = phone;
+      document.getElementById('msg').innerText = message;
+      return false;
+
     }
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 
 </html>
