@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RevoU | Build Your Skills</title>
+  <link rel="icon" type="image/x-icon" href="assets/image/logo.svg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+
+  <style>
+    .home {
+      background: linear-gradient(rgba(255, 238, 0, 0.5), rgba(107, 101, 12, 0.5)), url('assets/image/desktop.png');
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <img src="assets/image/logo.svg" height="40px" />
+      <div class="navlink"><a href="index.html">Home</a></div>
+      <div class="navlink"><a href="#profile">Profile</a></div>
+      <div class="navlink"><a href="#vms">Vision and Mission</a></div>
+      <div class="navlink"><a href="#message-us">Message Us</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="home" id="home">
+        <div class="home-paragraph">
+          <h1>Welcome to Our Website, <span id="nma"> </span></h1>
+          <div class="quote">
+            <h4>
+              Take a Look Around safely!
+            </h4>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="about-us" id="profile">
+        <div class="about-paragraph">
+          <h1>ABOUT US</h1>
+          <p>
+            RevoU Community is a go-to platform where you can access quality content and programs designed to help you advance in your professional career.
+          </p>
+          <p>Recession Proof your Career by learning the most valuable digital skills from the Best in the Industry. 100% Live Online Classes, Career Mentors, and Lifelong Community support to unlock endless opportunities.</p>
+          <p>
+            Network with thousands of like-minded professionals with strong desire for success, Enrich your connection, meet up offline with fellow alumni near you, Continue your lifelong learning with RevoU.
+          </p>
+          </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="vms">
+      <div class="vms">
+        <h1>VISION AND MISSION</h1>
+        <div class="vision">
+          <h2>Vision</h2>
+          <h3>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, beatae.
+          </h3>
+        </div>
+        <div class="mission">
+        <h2>Mission</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nisi cupiditate, temporibus quo iure repellendus vero tempora iusto consequatur ullam minima numquam doloremque at et laboriosam, explicabo perferendis necessitatibus. Laudantium!</p>
+        </div>
+      </div>
+      <br>
+
+      <div class="chapter">
+        <div >
+          <h3>Some of</h3>
+          <h1 style="margin-top: -10px;">OUR CHAPTER</h1>
+        </div>
+        <div class="chapter-img">
+          <img src="assets/image/gbr1.jpg" width="200">
+          <p>Chapter Depok</p>
+        </div>
+        <div class="chapter-img">
+          <img src="assets/image/gbr2.jpg" width="200">
+          <p>Chapter Bandung</p>
+        </div>
+        <div class="chapter-img">
+          <img src="assets/image/gbr3.jpg" width="200">
+          <p>Chapter Jakarta</p>
+        </div>
+        <h4>...And more!</h4>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="message-us">
+      <div class="message-us" id="message-us">
+        <div class="form">
+          <h2>MESSAGE US</h2>
+          <table>
+            <form name="message" onsubmit="return validate()">
+            <tr>
+              <th>
+                <label>Name</label>
+              </th>
+              <td><input type="text" name="name" id="nama"></td>
+            </tr>
+            <tr>
+              <th>
+                <label>Email</label>
+              </th>
+              <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr>
+              <th>
+                <label>Phone</label>
+              </th>
+              <td><input type="text" name="phone" id="phone"></td>
+            </tr>
+            <tr>
+              <th>
+                <label>Message</label>
+              </th>
+              <td><textarea name="message" id="message"></textarea></td>
+            </tr>
+            <tr>
+              <input type="submit" value="Send" class="btn"/>
+            </tr>
+        </form>
+        </table>
+  
+        </div>
+        <div class="message">
+          <p>Nama : <span id="nm"></span></p>
+          <p>Email : <span id="em"></span></p>
+          <p>Email : <span id="ph"></span></p>
+          <p>Message : <span id="msg"></span></p>
+        </div>
+      </div>
+    </section>
+    <hr />
+  </main>
+
+  <footer>
+    <div class="footer">
+      <h4>2023, Divananda A. S | With Revou</h4>
+    </div>
+  </footer>
+
+  <script>
+    var nama= prompt('Before We Get Started, May I Know Your Name?');
+    document.getElementById("nma").innerText = nama;
+  </script>
+  
+  <script>
+    function validate(){
+        var name= document.forms['message']['name'].value;
+        var email= document.forms['message']['email'].value;
+        var phone= document.forms['message']['phone'].value;
+        var message= document.forms['message']['message'].value;
+
+        if(nama == "" || email == "" || message == ""){
+            alert("Oops, you forget some field there, Buddy!");
+            return false;
+        }
+        document.getElementById('nm').innerText = name;
+        document.getElementById('em').innerText = email;
+        document.getElementById('ph').innerText = phone;
+        document.getElementById('msg').innerText = message;
+        return false;
+        
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+
+</html>
