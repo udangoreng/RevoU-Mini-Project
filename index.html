@@ -23,8 +23,8 @@
     <div class="nav">
       <img src="assets/image/logo.svg" height="40px" />
       <div class="navlink"><a href="index.html">Home</a></div>
-      <div class="navlink"><a href="#profile">Profile</a></div>
-      <div class="navlink"><a href="#vms">Vision and Mission</a></div>
+      <div class="navlink"><a href="profile.html">Profile</a></div>
+      <div class="navlink"><a href="profile.html#vms">Vision and Mission</a></div>
       <div class="navlink"><a href="#message-us">Message Us</a></div>
     </div>
   </header>
@@ -43,45 +43,6 @@
       </div>
       </div>
     </section>
-
-    <section>
-      <div class="about-us" id="profile">
-        <div class="about-paragraph">
-          <h1>ABOUT US</h1>
-          <p>
-            RevoU Community is a go-to platform where you can access quality content and programs designed to help you
-            advance in your professional career.
-          </p>
-          <p>Recession Proof your Career by learning the most valuable digital skills from the Best in the Industry.
-            100% Live Online Classes, Career Mentors, and Lifelong Community support to unlock endless opportunities.
-          </p>
-          <p>
-            Network with thousands of like-minded professionals with strong desire for success, Enrich your connection,
-            meet up offline with fellow alumni near you, Continue your lifelong learning with RevoU.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <hr />
-
-    <section id="vms">
-      <div class="vms">
-        <h1>VISION AND MISSION</h1>
-        <div class="vision">
-          <h2>Vision</h2>
-          <h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, beatae.
-          </h3>
-        </div>
-        <div class="mission">
-          <h2>Mission</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nisi cupiditate, temporibus quo iure
-            repellendus vero tempora iusto consequatur ullam minima numquam doloremque at et laboriosam, explicabo
-            perferendis necessitatibus. Laudantium!</p>
-        </div>
-      </div>
-      <br>
 
       <div class="chapter">
         <div>
@@ -116,37 +77,40 @@
                 <th>
                   <label>Name</label>
                 </th>
-                <td><input type="text" name="name" id="nama"></td>
+                <td><input type="text" name="name" id="nama" placeholder="nama"></td>
               </tr>
               <tr>
                 <th>
                   <label>Email</label>
                 </th>
-                <td><input type="text" name="email" id="email"></td>
+                <td><input type="text" name="email" id="email" placeholder="email"></td>
               </tr>
               <tr>
                 <th>
                   <label>Phone</label>
                 </th>
-                <td><input type="text" name="phone" id="phone"></td>
+                <td><input type="text" name="phone" id="phone" placeholder="phone"></td>
               </tr>
               <tr>
                 <th>
                   <label class="message-msg">Message</label>
                 </th>
-                <td><textarea name="message" id="message"></textarea></td>
+                <td><textarea name="message" id="message" placeholder="message"></textarea></td>
               </tr>
               <tr>
-                <input type="submit" value="Send" class="btn" />
+                <td colspan="2">
+                  <input type="submit" value="Send" class="btn" />
+                </td>
               </tr>
             </form>
           </table>
 
         </div>
         <div class="message">
+          <h1>Message Preview : </h1>
           <p>Nama : <span id="nm"></span></p>
           <p>Email : <span id="em"></span></p>
-          <p>Email : <span id="ph"></span></p>
+          <p>Phone : <span id="ph"></span></p>
           <p>Message : <span id="msg"></span></p>
         </div>
       </div>
@@ -159,30 +123,8 @@
       <h4>2023, Divananda A. S | With Revou</h4>
     </div>
   </footer>
-  <script>
-    var nama = prompt('Before We Get Started, May I Know Your Name?');
-    document.getElementById("nma").innerHTML = nama;
-    console.log(nama);
-
-    function validate() {
-      var name = document.forms['message']['name'].value;
-      var email = document.forms['message']['email'].value;
-      var phone = document.forms['message']['phone'].value;
-      var message = document.forms['message']['message'].value;
-
-      if (nama == "" || email == "" || message == "") {
-        alert("Oops, you forget some field there, Buddy!");
-        return false;
-      }
-      document.getElementById('nm').innerText = name;
-      document.getElementById('em').innerText = email;
-      document.getElementById('ph').innerText = phone;
-      document.getElementById('msg').innerText = message;
-      return false;
-
-    }
-  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="assets/js/index.js"></script>
 </body>
 
 </html>
